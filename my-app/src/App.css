@@ -1,0 +1,37 @@
+*,
+body,html{
+  margin: 0;
+  padding: 0;
+}
+
+.app-wrapper{
+  display: grid;
+}
+.header{
+  background-color: rgb(155, 111, 196);
+  height: 60px;
+}
+.nav{
+display: flex;
+height: 100vh;
+}
+
+.nav_list{
+  background-color: aquamarine;
+  height: 100%;
+  
+}
+
+.nav_item{
+  list-style: none;
+  padding: 10px;
+}
+.content{
+  width: 100vh;
+
+}
+
+.content_photo{
+  height: 200px;
+  width: 700px;
+}
