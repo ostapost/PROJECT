@@ -1,9 +1,9 @@
-import "./Header.css"
+import s from "./Header.module.css"
 
 function Header(){
    return(
 
-<header className="header">
+<header className={s.header}>
         <img  src="https://pngimg.com/uploads/deadpool/deadpool_PNG3.png" ></img>
 </header>
 

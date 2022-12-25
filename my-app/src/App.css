@@ -7,5 +7,6 @@ body,html{
 .nav{
   display: flex;
   height: 100vh;
+  background-color: aliceblue;
   }
   

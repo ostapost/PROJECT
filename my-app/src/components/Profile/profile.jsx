@@ -1,18 +1,17 @@
-import "./profile.css"
+import s from "./Profile.module.css"
+import MyPosts from "./MyPosts/MyPosts"
+import ProfileInfo from "./ProfileInfo/ProfileInfo"
 
-function Profile() {
-return(
-  <div className="content"> 
 
-  <img className='content_photo' src="https://bipbap.ru/wp-content/uploads/2017/09/gandex.ru-13546_db019403dfd8c022f08039883c18e88a-681x426.jpg"></img>
+function Profile(props) {
+    return (
 
-  <div className="item">інформація</div>
-  <div className="item">інформація</div>
-  <div className="item">інформація</div>
-  <div className="item">інформація</div>
-</div>
-)
+        <div className={s.profile}>
 
+           <ProfileInfo />
+            <MyPosts posts={props.state.posts}  />
+        </div>
+    )
 }
+
 export default Profile
-    
