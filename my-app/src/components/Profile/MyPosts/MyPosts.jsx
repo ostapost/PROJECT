@@ -1,27 +1,27 @@
 import s from "./MyPosts.module.css"
 import Post from "./Post/Post"
+import React from "react"
 function MyPosts(props) {
-    // let PostData = [
-        //     { id: 1, message: 'Hi, how are you?' , likeCount:12},
-        //     { id: 2, message: 'It\'s my first post!', likeCount:1 },
-        //     { id: 3, message: 'kur-kru', likeCount:1 },
-        //     { id: 4, message: 'Blabla!', likeCount:2 },
-        // ]
-        
-        console.log(props.PostData)
         
         let postArr = props.posts.map(p => 
-            <Post message={p.message} like={p.likeCount} />
-            )
+            <Post message={p.message} like={p.likeCount} />)
+    
+    let newPostElement = React.createRef()
+    
+    let addPost = () => {
+    debugger
+        let text = newPostElement.current.value
+        props.addPost(text)
+        newPostElement.current.value = " "
+    }
     
     return (
-
 
         <div className={s.MyPosts}>
 
             <h3>MY POST</h3>
-            <textarea></textarea>
-            <button className={s.button}>Add post</button>
+            <textarea ref={newPostElement}></textarea>
+            <button className={s.button} onClick={addPost}>Add post</button>
             <div className={s.posts}>
 
         {postArr}

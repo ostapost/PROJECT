@@ -6,7 +6,6 @@ function ProfileInfo() {
             
             <div className={s.avatar}>
                 Avatar + Description <br />
-                My posts
             </div>
             </div>
     )
