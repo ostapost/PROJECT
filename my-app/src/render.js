@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import {addPost} from './redux/state';
+import { updateNewPostText } from './redux/state';
+
 
 export let rerenderEntireTree = (state) => {
    
@@ -10,7 +12,7 @@ export let rerenderEntireTree = (state) => {
   root.render(
     <React.StrictMode>
     <App
-    
+    updateNewPostText={updateNewPostText}
     state={state}
     addPost={addPost}
     
